@@ -1,9 +1,9 @@
-package C01_String;
+package study.C01_String;
 
 public class CharAt {
 
 	public static void main(String[] args) {
-		
+
 		String str1 ="123";
 		String str2 ="888";
 		System.out.println(new CharAt().solve(str1, str2));

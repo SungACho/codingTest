@@ -1,10 +1,10 @@
-package C01_String;
+package study.C01_String;
 
 public class toCharArray {
 
-	
+
 public static void main(String[] args) {
-		
+
 //		String s = "(a(b(c)d)";
 //		String s = "(((a(b(c(e(f)d))";
 //	    String  s = "in(f(lea)r)n)";
@@ -21,8 +21,8 @@ public static void main(String[] args) {
 		StringBuilder sb = new StringBuilder();
 		StringBuilder result = new StringBuilder();
 		int openBrace=0; // '('
-		
-		//2 count 
+
+		//2 count
 		for(char c: s.toCharArray()) {
 			System.out.println("c "+c);
 			if(c=='(') {
@@ -44,6 +44,6 @@ public static void main(String[] args) {
 			result.append(sb.charAt(i));
 		}
 		return result.reverse().toString();
-		
+
 	}
 }
