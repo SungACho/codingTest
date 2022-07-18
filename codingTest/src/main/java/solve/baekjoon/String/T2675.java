@@ -1,35 +1,29 @@
 package solve.baekjoon.String;
 
-import java.io.IOException;
-import java.util.Scanner;
+import java.io.*;
 
 public class T2675 {
 	public static void main(String[] args) throws IOException { 
 		
-		Scanner sc = new Scanner(System.in);
-		int T = sc.nextInt();
-		System.out.println("");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		if(0 <=T && T <=1000) {
-			for(int c = 0; c < T; c++) {
-				int R = sc.nextInt();
-				String S = sc.next();
-				if(" ".equals(S) || R<1 ||R > 8) {
-					continue;
-				}
+		int num = Integer.parseInt(br.readLine());
+		for(int i = 0 ; i <num; i++) {
+			String[] line = br.readLine().split(" ");
+			int cnt = Integer.parseInt(line[0]);
+			String str = line[1];
 
-				char[] array = S.toCharArray();
-				if(array.length > 20) {
-					continue;
+			for(char c : str.toCharArray()) {
+				for(int j = 0 ; j <cnt; j++) {
+					bw.write(c);
 				}
-				String res = "";
-				
-				for(int i = 0; i < array.length; i ++) {
-					res.repeat(R);
-				}
-				System.out.print(res);
 			}
+			bw.write("\n");
 		}
+		br.close();
+		bw.flush();
+		bw.close();
 	}
 	
 }
