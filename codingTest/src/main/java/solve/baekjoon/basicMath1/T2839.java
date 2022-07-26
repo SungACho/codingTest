@@ -13,15 +13,12 @@ public class T2839 {
 	public static int calculate(int N) {
 		
 		if(N%5 == 0) {
-			System.out.println("case1");
 			return N/5;
 			
 		}else if((N%5)%3 == 0) {
-			System.out.println("case2");
 			return (N/5) + (N%5)/3;
 			
 		}else {
-			System.out.println("case3");
 			int result = -1;
 			
 			for(int i = N/5; i >=0; i--) {
