@@ -1,13 +1,13 @@
 package solve.baekjoon.function;
 
- class T15596 {
+public class T15596 {
 
 	 long sum(int[] a) {
-		long sum = 0;
+		long ans = 0;
 		
 		for(int i = 0 ; i < a.length; i++) {
-			sum += a[i];
+			ans += a[i];
 		}
-		return sum;
+		return ans;
 	}
 }
