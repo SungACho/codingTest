@@ -3,8 +3,6 @@ package solve.baekjoon.backtracking;
 import java.io.*;
 import java.util.*;
 
-import study.C09_BackTracking.Combination;
-
 public class T15650 {
 	
 	public static void main(String[] args) throws IOException {
