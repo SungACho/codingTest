@@ -32,12 +32,12 @@ public class Permutation {
 					continue; 
 				}
 					
-				System.out.println("i "+i);
+				//System.out.println("i "+i);
 				tempList.add(nums[i]);
-				System.out.println("22tempList: "+tempList);
+				//System.out.println("22tempList: "+tempList);
 				backtrack(result, tempList, nums);
 				tempList.remove(tempList.size() - 1);
-				System.out.println("33tempList: "+tempList);
+				//System.out.println("33tempList: "+tempList);
 			}
 		}
 		System.out.println("====end====================="+count );

@@ -30,7 +30,7 @@ public class Combination {
 			//System.out.println("22tempList: "+tempList);
 			backtrack(result, tempList, n, k, i + 1);
 			tempList.remove(tempList.size() - 1);
-		//	System.out.println("remove tempList: "+tempList);
+			//System.out.println("remove tempList: "+tempList);
 		}
 	}
 }
