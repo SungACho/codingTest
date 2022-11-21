@@ -11,11 +11,13 @@ public class Combination {
 
 	public List<List<Integer>> solve(int n, int k) {
 		List<List<Integer>> result = new ArrayList<List<Integer>>();
-		backtrack(result, new ArrayList<Integer>(), n, k, 1);
+		System.out.println("before result :" + result);
+		backtrack(result, new ArrayList<Integer>(), 1, k, n);
+		System.out.println("after result : "+ result);
 		return result;
 	}
 
-	public void backtrack(List<List<Integer>> result, ArrayList<Integer> tempList, int n, int k, int start) {
+	public void backtrack(List<List<Integer>> result, ArrayList<Integer> tempList, int start, int k, int n) {
 		if (tempList.size() == k) {
 			result.add(new ArrayList<>(tempList));
 	//	    System.out.println("add tempList: "+tempList);
@@ -25,10 +27,10 @@ public class Combination {
 		}
 		
 
-		for (int i = start; i <= n; i++) {
+		for (int i = n; i >= start; i--) {
 			tempList.add(i);
-			//System.out.println("22tempList: "+tempList);
-			backtrack(result, tempList, n, k, i + 1);
+			System.out.println("22tempList: "+tempList);
+			backtrack(result, tempList, start, k, i - 1);
 			tempList.remove(tempList.size() - 1);
 			//System.out.println("remove tempList: "+tempList);
 		}
