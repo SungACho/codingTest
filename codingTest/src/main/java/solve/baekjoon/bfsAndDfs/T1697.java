@@ -43,7 +43,6 @@ public class T1697 {
 					return;
 				}
 				
-				
 				if(newVal >= 0 && newVal < 100001 && cntList[newVal] == 0) {
 					queue.add(newVal);
 					cntList[newVal] = cntList[curVal] + 1;
